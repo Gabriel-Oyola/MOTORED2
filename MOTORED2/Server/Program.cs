@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Motored.BD.Data;
 using MOTORED2.Server;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+var conn = builder.Configuration.GetConnectionString("con");
+
+builder.Services.AddDbContext<BDContext>(opciones => opciones.UseSqlServer(conn));
 
 var app = builder.Build();
 
@@ -23,9 +27,7 @@ else
     app.UseHsts();
 }
 
-var conn = builder.Configuration.GetConnectionString("con");
 
-builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer(conn)); 
 
 app.UseHttpsRedirection();
 
