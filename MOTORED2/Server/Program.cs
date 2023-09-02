@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using MOTORED2.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,10 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+var conn = builder.Configuration.GetConnectionString("con");
+
+builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer(conn)); 
 
 app.UseHttpsRedirection();
 
