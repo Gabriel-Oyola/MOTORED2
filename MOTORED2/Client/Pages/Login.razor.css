@@ -1,0 +1,49 @@
+﻿body {
+}
+
+
+.Contenedor2 {
+    padding: 36px 103px 224px 102px;
+    background: yellow;
+    border-radius: 2em;
+    margin: 56px 700px 6px 710px;
+    text-align: center
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    margin: 65px 1px 1px 1px;
+    border-radius: 2em;
+}
+
+
+
+input {
+    border-radius: 2em;
+    background-color: #D7D2D2;
+}
+
+
+button {
+    border-radius: 2em;
+}
+
+a {
+    font-family: fantasy;
+}
+
+button {
+    font-family: fantasy;
+    background-color: #D7D2D2;
+}
+
+.motored {
+    text-align: center;
+    color: red;
+    font-family: fantasy;
+}
+
+.pagina {
+    text-align: center;
+}

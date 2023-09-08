@@ -1,0 +1,48 @@
+﻿.body {
+    background-color: black;
+    Background: red;
+    color: black;
+}
+
+.titulo {
+    color: red;
+}
+
+.Contenedor {
+    padding: 105px 151px 120px 8px;
+    display: flex;
+    background: yellow;
+    border-radius: 2em;
+    margin: 117px 478px 38px 436px;
+}
+
+.Fila1 {
+    display: flex;
+    flex-direction: column;
+    Margin: 0px 9px -13px 223px;
+}
+
+.Fila2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 1px 81px;
+}
+
+input {
+    border-radius: 2em;
+    background-color: #D7D2D2;
+}
+
+a {
+    margin: 20px 1px 1px 1px;
+    font-family: fantasy;
+}
+
+button {
+    border-color: red;
+    Background: red;
+    color: white
+}
+
+.asd {
+}
