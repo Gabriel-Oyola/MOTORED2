@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOTORED2.Client", "MOTORED2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOTORED2.Shared", "MOTORED2\Shared\MOTORED2.Shared.csproj", "{B8C19924-166B-4232-8342-2A8C04D9DCC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motored.BD", "Motored.BD\Motored.BD.csproj", "{B27EF45E-9ED4-4A0A-B69E-8320448ABA00}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{B8C19924-166B-4232-8342-2A8C04D9DCC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C19924-166B-4232-8342-2A8C04D9DCC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C19924-166B-4232-8342-2A8C04D9DCC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B27EF45E-9ED4-4A0A-B69E-8320448ABA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B27EF45E-9ED4-4A0A-B69E-8320448ABA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B27EF45E-9ED4-4A0A-B69E-8320448ABA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B27EF45E-9ED4-4A0A-B69E-8320448ABA00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.EntityFrameworkCore;
-using Motored.BD.Data;
+using Microsoft.EntityFrameworkCore; 
 using MOTORED2.Server;
+using MOTORED2.Server.Models; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-var conn = builder.Configuration.GetConnectionString("con");
 
-builder.Services.AddDbContext<BDContext>(opciones => opciones.UseSqlServer(conn));
+builder.Services.AddDbContext<MotoredContext>(options => 
+{ options.UseSqlServer(builder.Configuration.GetConnectionString("cadenaSQL")); 
+}); 
+//Se realiza la conexion con el app setting que contiene                                                                                                    
+//la cadena de conexion que conecta con la bd de sql
+
 
 var app = builder.Build();
 
