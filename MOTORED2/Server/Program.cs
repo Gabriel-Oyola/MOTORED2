@@ -24,7 +24,16 @@ builder.Services.AddDbContext<MotoredContext>(options =>
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>(); //Implementamos clase con su interfaz para poder utilizarla
                                                                //en los demas controladores
-
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(
+        new ResponseCacheAttribute
+        {
+            NoStore = true,
+            Location = ResponseCacheLocation.None
+        }
+      );
+});
 //Configuramos la autenticacion 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(option =>
@@ -33,6 +42,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         option.ExpireTimeSpan= TimeSpan.FromMinutes(20);
     }
     );
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
