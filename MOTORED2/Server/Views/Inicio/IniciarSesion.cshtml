@@ -38,17 +38,14 @@
                             {
                                 <div class="alert alert-danger" role="alert">
 
-                                    @ViewData["Mensaje"]
+                                <div class="form-group">
+                                    <div class="alert alert-danger" role="alert">
+                                        @ViewData["Mensaje"]
+                                    </div>
                                 </div>
-
                             }
-                            <div class="boton-2">
-                                <label for="remember-me" class="text-info"><span>Recordar usuario</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn-2" value="Iniciar sesion">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="@Url.Action("Registrarse", "Inicio")" class="text-info">Registrarse</a>
-                            </div>
+                            ¿No tienes una cuenta? <a href="@Url.Action("Mapa","Mapa")"> Registraste!</a>
+
                         </form>
                     </div>
                 </div>
