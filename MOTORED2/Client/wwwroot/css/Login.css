@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-color: #f9db4a;
+    background-color: #404040;
     height: 100vh;
     color: white;
 }
@@ -19,20 +19,9 @@
     border-radius: 25px;
 }
 
-
-
 .text-info {
-    color: #f9db4a !important;
+    color: #bd0003 !important;
 }
-/*
-    
-.btn-info {
-    color: black;
-    background-color: #f9db4a;
-    border-color: #f9db4a; 
-    
-} 
-*/
 
 .boton-2 {
     display: block;
@@ -40,32 +29,32 @@
 
 .btn-2 {
     text-decoration: none;
-    background-color: #e1ad12;
-    color: rgb(49, 49, 49);
+    background-color: #bd0003;
+    color: white;
     padding: 10px 20px;
     border-radius: 20px;
     transition: all .3s ease;
     justify-content: center;
 }
-
     .btn-2:hover {
-        background-color: #ffc000;
-        color: black;
-        box-shadow: 0 0 5px #ffc000,0 0 20px #ffc000, 0 0 60px #ffc000, 0 0 150px #ffc000;
+        background-color: #bd0003;
+        color: white;
+        box-shadow: 0 0 5px #bd0003,0 0 20px #bd0003, 0 0 60px #bd0003, 0 0 150px #bd0003;
     }
-
-
 
 #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;
 }
 
+
+
     #login .container #login-row #login-column #login-box #login-form #register-link {
         margin-top: -85px;
     }
 
+
 footer {
-    color: #f9db4a;
+    color: #bd0003;
     background-color: black;
     text-align: center;
     height: 2rem 3px;

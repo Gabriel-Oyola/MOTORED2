@@ -1,27 +1,75 @@
-﻿
-
+﻿@using MOTORED2.Server; 
+@{
+    Layout = null;
+}
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Motored</title>
+    <link href="~/Views/Home/InicioH.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
-   
+    <header>
+        <section id="Menu">
+            <ul>
+                <a href="#">Mi Perfil</a>
+                <a href="#">Mi Taller</a>
+                <a href="#">Salir</a>
+            </ul>
 
-    <h1>Hello, world! @ViewData["nombreUsuario"] </h1>
+        </section>
+    </header>
 
-    Welcome to your new app.
 
-    <SurveyPrompt Title="How is Blazor working for you?" />
 
-    <div>
-    <a href= "@Url.Action("CerrarSesion","Home")">Cerrar Sesion</a>
-        <a href="@Url.Action("Mapa","Maps")">Ir a mapa</a>
-</div>
+<div class="container"> 
+        <div class="card"> 
+            <img src="/BT1.jpg">
+            <h4>Taller cerca</h4> 
+            <br/>
+            <p> Encuentra mecanicos cerca de tu ubicación en tiempo real
+                </p>
+                <br/>
+                <div class="boton-2">
 
-</body>
+                    <input type="button" name="submit" class="btn-2" value="Encontrar talleres" />
+                  </div>     
+        </div>
+
+        <div class="card"> 
+            <img src="/bt2.jpg">
+            <h4>Tiendas/Gomería cerca</h4> 
+            <br/>
+            <p>Encuentra gomerías y tiendas de repuestos cerca de ti con nuestro sistema geolocalizador</p>
+                <br/>
+                <div class="boton-2">
+
+                    <input type="button" name="submit" class="btn-2" value="Ir buscar Tiendas/Gomerías" />
+        </div> 
+
+        <div class="card"> 
+            <img src="/bt3.jpg">
+            <h4>Taller top</h4> 
+            <br/>
+            <p>Aquí encontraras los talleres top de tu ciudad</p>
+                <br/>
+                <div class="boton-2">
+
+                    <input type="button" name="submit" class="btn-2" value="Ir ranking de Talleres">
+                  </div>     
+        </div>
+
+
+
+    </div>
+
+        <footer>
+            <P> MOTORED &COPY;. Todos los derechos reservados </P>
+        </footer>
+</body> 
+
 </html>
-

@@ -9,53 +9,64 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>IniciarSesion</title>
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="MOTORED2.Client.styles.css" rel="stylesheet" />
-    <link href="Views/Inicio/Registrarse.css" rel="stylesheet" />
+    @*<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />*@
+   
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="css/Login.css" rel="stylesheet" />
+    @*<link href="MOTORED2.Client.styles.css" rel="stylesheet" />*@
+   @* <link href="Views/Inicio/Registrarse.css" rel="stylesheet" />*@
 </head>
 <body>
-    <div class="container mt-5 pt-5">
-
-        <div class="row justify-content-center">
-            <div class="col-12 col-xl-4 col-md-6">
-
-                <div class="card">
-                    <div class="card-header">
-                        Iniciar Sesion
-                    </div>
-                    <div class="card-body">
-
-                        <form asp-controller="Inicio" asp-action="IniciarSesion" method="post">
-
-                            <input class="form-control mb-3" type="text" placeholder="Correo" required name="correo" />
-                            <input class="form-control mb-3" type="password" placeholder="Contraseña" required name="clave" />
-                            <div class="d-grid gap-2 mb-3">
-                                <button class="btn btn-primary" type="submit">Iniciar Sesion</button>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Motored</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" asp-controller="Inicio" asp-action="IniciarSesion" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Correo</label><br>
+                                <input type="text"  required name="correo" id="correo" class="form-control" placeholder="Correo">
                             </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Contraseña</label><br>
+                                <input type="password" required name="clave" id="clave" class="form-control" placeholder="Contraseña">
+                            </div>
+
                             @if (ViewData["Mensaje"] != null)
                             {
+                                <div class="alert alert-danger" role="alert">
 
-                                <div class="form-group">
-                                    <div class="alert alert-danger" role="alert">
-                                        @ViewData["Mensaje"]
-                                    </div>
+                                    @ViewData["Mensaje"]
                                 </div>
+
                             }
-                            ¿No tienes una cuenta? <a href="@Url.Action("Mapa","Mapa")"> Registraste!</a>
-
+                            <div class="boton-2">
+                                <label for="remember-me" class="text-info"><span>Recordar usuario</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn-2" value="Iniciar sesion">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="@Url.Action("Registrarse", "Inicio")" class="text-info">Registrarse</a>
+                            </div>
                         </form>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
-
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
 
- <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <br />
+    <br />
+    <br />
+    <footer>
+        <p> Motored &copy;. Todos los derechos reservados</p>
+    </footer>
 </body>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
